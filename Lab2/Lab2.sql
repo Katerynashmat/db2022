@@ -189,15 +189,15 @@
 --SELECT max(weight) FROM Categories;
 
 --61) Обрати товар з вагою вище 15 з Categories
---SELECT brand, weight FROM Categories where weight<15;
+--SELECT brand, weight FROM Categories where weight>15;
 
 --62) Обрати товар з вагою нижче або дорівню 15 з Categories
 --SELECT brand, weight FROM Categories where weight<=15;
 
 --63) Обрати товар з вагою нижче 15 з Categories
---SELECT brand, weight FROM Categories where weight>15;
+--SELECT brand, weight FROM Categories where weight<15;
 
---64) Обрати товар з вагою нижче або дорівнює 15 з Categories
+--64) Обрати товар з вагою вище або дорівнює 15 з Categories
 --SELECT brand, weight FROM Categories where weight>=15;
 
 --65) Обрати стовпці size, weight, brand доки є збіг за id для таблиць Product та Categories
