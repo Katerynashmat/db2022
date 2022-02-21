@@ -243,49 +243,49 @@
 --SELECT brand FROM Categories WHERE color = 'Red' AND brand LIKE '%с';
 
 --76) Обрати бренд товару з Categories які червоного кольору та мають всередині літеру С
---SELECT brand FROM Categories WHERE color = 'Red' AND brand LIKE '%с%';
+--SELECT brand FROM Categories WHERE color = 'Red' AND brand ILIKE '%с%';
 
 --77) Обрати бренд товару з Categories які червоного кольору, починаються на літеру С та не менше 7 літер
 --SELECT brand FROM Categories WHERE color = 'Red' AND brand LIKE 'C_____%';
 
 --78) Обрати бренд товару з Categories які не червоного кольору та починаються на літеру С
---SELECT brand FROM Categories WHERE NOT color = 'Red' AND brand LIKE 'C%';
+--SELECT brand FROM Categories WHERE NOT color = 'Red' AND brand ILIKE 'C%';
 
---79) Обрати бренд товару з Categories які червоного кольору та не починаються на літеру С
---SELECT brand FROM Categories WHERE color = 'Red' AND NOT brand LIKE 'C%';
+--79) Дописати запси зліва таблиці
+--SELECT * FROM Categories LEFT JOIN Product ON Categories.category_id=Product.category_id;
 
---80) Обрати бренд товару з Categories які не червоного кольору та не починаються на літеру С
---SELECT brand FROM Categories WHERE NOT color = 'Red' AND NOT brand LIKE 'C%';
+--80) Дописати запси справа таблиці
+--SELECT * FROM Categories RIGHT JOIN Product ON Categories.category_id=Product.category_id;
 
---81) Обрати бренд товару з Categories які червоного кольору або починаються на літеру С
---SELECT brand FROM Categories WHERE color = 'Red' OR brand LIKE 'C%';
+--81) Дописати запси в об'єднанні фнкцій RIGHT+LEFT+INNER таблиці
+--SELECT * FROM Categories FULL JOIN Product ON Categories.category_id=Product.category_id;
 
---82) Обрати бренд товару з Categories які не червоного кольору або не починаються на літеру С
---SELECT brand FROM Categories WHERE NOT color = 'Red' OR  NOT brand LIKE 'C%';
+--82) Змінити значення у таблиці
+--UPDATE Categories SELECT brand = 'Sikes';
 
---83) Обрати бренд товару з Categories які не червоного кольору або починаються на літеру С
---SELECT brand FROM Categories WHERE NOT color = 'Red' OR brand LIKE 'C%';
+--83) Змінити значення у продуктів з розміром S
+--UPDATE Categories SELECT brand = 'Sikes' WHERE size = 'S';
 
---84) Обрати бренд товару з Categories які червоного кольору або не починаються на літеру С
---SELECT brand FROM Categories WHERE color = 'Red' OR NOT brand LIKE 'C%';
+--84) Вивести значення які не входять у проміжок
+--SELECT * FROM Categories WHERE color NOT IN ('Blue', 'Red', 'Crimson')
 
---85) Обрати бренд товару з Categories які червоного або синього кольору або починаються на літеру С
---SELECT brand FROM Categories WHERE (color = 'Red' or color = 'Blue') OR brand LIKE 'C%';
+--85) Вивести значення які не починаються на літеру С
+--SELECT * FROM Categories WHERE brand NOT LIKE 'C%';
 
---86) Обрати бренд товару з Categories які червоного та синього кольору або закінчуються на літеру С
---SELECT brand FROM Categories WHERE (color = 'Red' and color = 'Blue') OR brand LIKE '%с';
+--86) Видалити таблицю
+--TRUNCATE TABLE Manufacturer;
 
---87) Обрати бренд товару з Categories які червоного та синього кольору або не закінчуються на літеру С
---SELECT brand FROM Categories WHERE (color = 'Red' and color = 'Blue') OR NOT brand LIKE '%c';
+--87) Видалити таблицю
+--DELETE FROM Manufacturer;
 
 --88) Обрати бренд товару з Categories які червоного або синього кольору або не починаються на літеру С
 --SELECT brand FROM Categories WHERE (color = 'Red' or color = 'Blue') OR NOT brand LIKE 'C%';
 
---89) Обрати бренд товару з Categories які не червоного та не синього кольору або починаються на літеру С
---SELECT brand FROM Categories WHERE NOT color = 'Red' AND NOT color = 'Blue' OR brand LIKE 'C%';
+--89) Вивести 2 таблиці з id
+--SELECT * FROM Categories INNER JOIN Product ON Categories.category_id=Product.category_id;
 
---90) Обрати бренд товару з Categories які не червоного або не синього кольору та не закінчуються на літеру С
---SELECT brand FROM Categories WHERE NOT color = 'Red' OR NOT color = 'Blue' AND NOT brand LIKE '%с';
+--90) Множення таблиць
+--SELECT * FROM Categories CROSS JOIN Product
 
 --91) Обрати бренд товару з Categories які червоного кольору або починаються на літеру С сортуючи за брендом
 --SELECT brand FROM Categories WHERE color = 'Red' OR brand LIKE 'C%' ORDERED BY brand;
