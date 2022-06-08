@@ -1,0 +1,105 @@
+<body>
+<div>
+    <div>
+        <h2>Edit Product</h2>
+    </div>
+    <div>
+        <form [formGroup]="addProduct" novalidate>
+            <div>
+                <div class="price">Price ID</div>
+                <div class="form">
+                    <input type="text" formControlName="price_id">
+                </div>
+            </div>
+
+            <div>
+                <div class="weight">Weight</div>
+                <div class="form1">
+                    <input type="text" formControlName="weight">
+                </div>
+            </div>
+
+            <div>
+                <div class="manufacturer">Manufacturer ID</div>
+                <div class="form2">
+                    <input type="text" formControlName="manufacturer_id">
+                </div>
+            </div>
+
+            <div>
+                <div class="category">Category ID</div>
+                <div class="form3">
+                    <input type="text" formControlName="category_id">
+                </div>
+            </div>
+
+            <div>
+                <div></div>
+                <div>
+                    <button type="submit" (click)="onSubmit()">Update</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+</body>
+
+<style>
+    body{
+        background: linear-gradient(45deg, #EECFBA, #C5DDE8);
+    }
+    h2{
+        margin-top: 40px;
+        margin-left: 20px;
+        font-size:30px;
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    }
+    .manufacturer{
+        margin-top: 20px;
+        margin-left: 20px;
+        font-size:30px;
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    }
+    .category{
+        margin-top: 20px;
+        margin-left: 20px;
+        font-size:30px;
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    }
+    .price{
+        margin-left: 20px;
+        font-size:30px;
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    }
+    .weight{
+        margin-top: 20px;
+        margin-left: 20px;
+        font-size:30px;
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    }
+    .form{
+        margin-top: 20px;
+        margin-left: 20px;
+    }
+    .form1{
+        margin-top: 20px;
+        margin-left: 20px;
+    }
+    .form2{
+        margin-top: 20px;
+        margin-left: 20px;
+    }
+    .form3{
+        margin-top: 20px;
+        margin-left: 20px;
+    }
+    button{
+        margin-top: 30px;
+        margin-left: 20px;
+        font-size: 30px;
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        border: none;
+        background-color: #efa876;
+        padding: 10px;
+    }
+</style>

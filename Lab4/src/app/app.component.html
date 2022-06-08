@@ -1,0 +1,55 @@
+<body>
+<div>
+    <nav>
+        <div>
+            <button type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <a href="#">Application</a>
+            <span></span>
+          </button>
+            <div>
+                <ul>
+                    <li>
+                        <a aria-current="page" href="/">Return</a>
+                    </li>
+                    <li>
+                        <a href="/add-product">Add Product</a>
+                    </li>
+                    <li>
+                        <a href="/list-product">List Product</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</div>
+
+<div class="container">
+    <router-outlet></router-outlet>
+</div>
+</body>
+
+<style>
+    body{
+        background: linear-gradient(45deg, #EECFBA, #C5DDE8);
+    }
+    div{
+        margin-top: 40px;
+        margin-left: 20px;
+        font-size:30px;
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    }
+    button{
+        font-size: 30px;
+        background-color: #efa876;
+        border: none;
+        color: white;
+        padding: 15px;
+        }
+    a{
+        color: black;
+        text-decoration: none;
+    }
+    ul {
+  list-style: square;
+}
+</style>

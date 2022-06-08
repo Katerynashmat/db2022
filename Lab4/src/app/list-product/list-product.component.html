@@ -1,0 +1,67 @@
+<body>
+<div>
+    <h2>List of Products</h2>
+</div>
+
+<div>
+    <table>
+        <thead>
+            <th>Price ID</th>
+            <th>Weight</th>
+            <th>Manufacturer ID</th>
+            <th>Category ID</th>
+            <th>Edit</th>
+            <th>Delete</th>
+        </thead>
+        <tbody>
+            <tr *ngFor="let product">
+                <td>{{Product.price_id}}</td>
+                <td>{{Product.weight}}</td>
+                <td>{{Product.manufacturer_id}}</td>
+                <td>{{Product.category_id}}</td>
+                <td>
+                    <button class="edit"><a href="edit-product/{{Product._id}}">Edit</a></button>
+                    <button class="delete" (click)="delele">Delete</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+</body>
+
+<style>
+    body{
+        background: linear-gradient(45deg, #EECFBA, #C5DDE8);
+    }
+    h2{
+        font-size: 35px;
+        margin-top: 30px;
+        margin-left: 100px;
+    }
+    th{
+        font-size: 30px;
+        padding-left: 20px;
+    }
+    a{
+        color: black;
+        text-decoration: none;
+    }
+    .edit{
+        font-size: 30px;
+        background-color: #efa876;
+        border: none;
+        color: black;
+        margin-left: 20px;
+    }
+    .delete{
+        margin-left: 100px;
+        font-size: 30px;
+        background-color: #efa876;
+        border: none;
+        color: black;
+    }
+    td{
+        font-size: 30px;
+        padding-left: 20px;
+    }
+</style>
