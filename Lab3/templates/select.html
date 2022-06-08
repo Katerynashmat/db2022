@@ -1,0 +1,40 @@
+<body></body>{%extends 'base.html' %}
+
+{%block content %}
+    <form class = "grid" action="/change" method="POST">
+        <select id="table" name="table" required>
+            <option value="">Select table</option>
+            <option value="Categories">Categories</option>
+            <option value="Product">Product</option>
+            <option value="Product_storage">Product_storage</option>
+            <option value="Storage">Storage</option>
+            <option value="Manufacturer">Manufacturer</option>
+            <input type="submit" class="submit">
+        </select>
+    </form>
+{% endblock %}
+</body>
+
+<style>
+    body{
+     background: linear-gradient(45deg, #EECFBA, #C5DDE8);
+    }
+    option{
+        font-size: 20px;
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    }
+    .grid{
+        font-size: 30px;
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        margin-left: 40px;
+        margin-top: 30px;
+    }
+    .submit{
+        margin-left: 20px;
+        font-size: 20px;
+        background-color: #efa876;
+        border: none;
+        color: black;
+        padding: 10px;
+    }
+</style>

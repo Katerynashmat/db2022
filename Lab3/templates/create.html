@@ -1,0 +1,118 @@
+<body>{%extends 'base.html' %}
+
+{%block content %}
+    {% if name %}
+    <h3>Here you see {{table_name}} table</h3>
+    {% endif %}
+    <form class="grid" action="/create" method="POST">
+        {% if name == "Categories" %}
+        <label for="category_id">Point category_id:</label><br>
+        <input type="text" id="category_id" name="category_id"><br>
+
+        <label for="size">Point size:</label><br>
+        <input type="text" id="size" name="size"><br>
+
+        <label for="weight">Point weight:</label><br>
+        <input type="text" id="weight" name="weight"><br>
+
+        <label for="color">Point color:</label><br>
+        <input type="text" id="color" name="color"><br>
+
+        <label for="brand">Point brand:</label><br>
+        <input type="text" id="brand" name="brand"><br>
+        <input type="submit" class="submit">
+        {% endif %}
+
+        {% if name == "Product" %}
+        <label for="id">Point id :</label><br>
+        <input type="text" id="id" name="id"><br>
+
+        <label for="price_id">Point price_id:</label><br>
+        <input type="text" id="price_id" name="price_id"><br>
+
+        <label for="weight">Point weight:</label><br>
+        <input type="text" id="weight" name="weight"><br>
+
+        <label for="manufacturer_id">Point manufacturer_id:</label><br>
+        <input type="text" id="manufacturer_id" name="manufacturer_id"><br>
+        
+        <label for="category_id">Point category_id:</label><br>
+        <input type="text" id="category_id" name="category_id"><br>
+        <input type="submit" class="submit">
+        {% endif %}
+        
+        {% if name == "Product_storage" %}
+        <label for="storage_id">Point storage_id:</label><br>
+        <input type="text" id="storage_id" name="storage_id"><br>
+
+        <label for="values">Point value:</label><br>
+        <input type="text" id="values" name="values"><br>
+        <input type="submit" class="submit">
+        {% endif %}
+
+        {% if name == "storage" %}
+        <label for="storage_id">Point storage_id:</label><br>
+        <input type="text" id="storage_id" name="storage_id"><br>
+
+        <label for="adress">Point adress:</label><br>
+        <input type="text" id="adress" name="adress"><br>
+        <input type="submit" class="submit">
+        {% endif %}
+
+        {% if name == "manufacturer" %}
+        <label for="manufecturer_id">Point manufecturer_id:</label><br>
+        <input type="text" id="manufecturer_id" name="manufecturer_id"><br>
+
+        <label for="purchase_price">Point purchase_price:</label><br>
+        <input type="text" id="purchase_price" name="purchase_price"><br>
+
+        <label for="category">Point category:</label><br>
+        <input type="text" id="category" name="category"><br>
+        <input type="submit" class="submit">
+        {% endif %}
+    </form>
+    <br><a href="http://127.0.0.1:5000/">Change</a>
+
+
+{% endblock %}
+</body>
+
+<style>
+    body{
+     background: linear-gradient(45deg, #EECFBA, #C5DDE8);
+    }
+    h3{
+    font-size: 20px;
+    margin-left: 40px;
+    margin-top: 30px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  }
+  label{
+      margin-left: 40px;
+      font-size: 20px;
+      font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  }
+  input{
+    margin-top: 10px;
+      margin-left: 40px;
+      font-size: 20px;
+      color: white;
+  }
+  a{
+    font-size: 20px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color:black;
+    text-decoration: none;
+    margin-left: 40px;
+    margin-top: 30px;
+  }
+  .submit{
+    margin-top: 20px;
+    margin-left: 40px;
+        font-size: 20px;
+        background-color: #efa876;
+        border: none;
+        color: black;
+        padding: 7px;
+  }
+</style>
